@@ -1,0 +1,11 @@
+@mixin breakpoint-medium() {
+    @media (min-width: $breakpoint-medium) {
+        @content; // Reprend le contenu entre les accolades du @include qui appelle ce mixin
+    }
+}
+
+@mixin breakpoint-large() {
+    @media (min-width: $breakpoint-large) {
+        @content;
+    }
+}

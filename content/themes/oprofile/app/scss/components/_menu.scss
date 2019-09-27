@@ -1,0 +1,41 @@
+.menu {
+    &__list {
+        display: flex;
+
+        &__item {
+            margin: 0 $gutter-small;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &__link {
+                font-weight: 900;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &--vertical {
+        .menu__list {
+            flex-direction: column;
+            text-align: center;
+
+            &__item {
+                margin: 0 0 $gutter;
+                padding-bottom: $gutter;
+            }
+        }
+    }
+
+    &--uppercase {
+        .menu__list__item__link {
+            font-size: .9rem;
+            text-transform: uppercase;
+        }
+    }
+}

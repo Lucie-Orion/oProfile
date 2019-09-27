@@ -1,0 +1,23 @@
+.header {
+    align-items: center;
+    display: flex;
+    grid-area: header;
+    height: 3rem;
+    justify-content: space-between;
+    padding: $gutter;
+    z-index: 1;
+
+    .logo,
+    .menu__list__item__link,
+    &__ui-button {
+        color: $color-dark-background-text;
+    }
+
+    &--fixed {
+        background: linear-gradient(to right, $color-primary, $color-secondary);
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: -3rem;
+    }
+}

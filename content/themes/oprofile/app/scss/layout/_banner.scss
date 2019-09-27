@@ -1,0 +1,80 @@
+.banner {
+    background: {
+        position: top right;
+        size: cover;
+    }
+    grid-area: banner;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 0;
+
+    &__container {
+        padding: $gutter;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 75%;
+    }
+
+    &__header {
+        &__title {
+            color: $color-dark-background-text;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: $gutter;
+        }
+    }
+
+    &__main {
+        color: $color-dark-background-text;
+        font-weight: 500;
+        margin-bottom: $gutter;
+        line-height: 1.5rem;
+    }
+
+    &__footer {
+        &__links {
+            align-items: flex-start;
+            display: flex;
+            //flex-direction: column;
+
+            
+                flex-direction: column;
+                :first-of-type {
+                    margin-bottom: 1rem;
+                }
+            
+            @media (min-width: $breakpoint-large) {
+                flex-direction: row;
+                :first-of-type {
+                    margin-right: 1rem;
+                }
+            }
+
+            > * {
+                margin-bottom: $gutter-thin;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+
+            
+        }
+    }
+
+    &::after {
+        background: linear-gradient(
+            to right,
+            transparentize($color-banner-background-text, 0.5),
+            transparent
+        );
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}

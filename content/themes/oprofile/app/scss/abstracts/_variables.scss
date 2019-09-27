@@ -1,0 +1,47 @@
+// Vendors variables
+$fa-font-path: '~font-awesome/fonts';
+
+$border-width: 3px;
+$border-width-thin: 1px;
+
+$breakpoint-medium: 600px;
+$breakpoint-large: 900px;
+
+$color-primary: #8A7EF5;
+$color-secondary: #7BBCFE;
+$color-ternary: #2C334C;
+
+$color-dark-background-text: #FFF;
+
+$color-banner-background-text: #000;
+
+$color-skills-background: #F4F5F9;
+$color-skills-border: #D2D2D2;
+
+$color-footer-text: lighten($color-ternary, 75);
+$color-footer-border: lighten($color-ternary, 50);
+
+// Variable de type map
+$color-posts-background-colors: (
+    1: $color-secondary,
+    2: $color-primary,
+    3: #EC8D81,
+    4: #E7B788,
+    5: #8EA9E8,
+    6: #87C5A4
+);
+
+$duration: .5s;
+$duration-fast: .25s;
+$duration-slow: 1s;
+
+$font-stack: 'Roboto', Arial, sans-serif;
+$font-stack-title: 'Roboto Slab', Georgia, serif;
+
+$gutter-thin: .25rem;
+$gutter-small: .5rem;
+$gutter: 1rem;
+$gutter-medium: 1.5rem;
+$gutter-large: 2rem;
+$gutter-very-large: 3rem;
+$gutter-extra-large: 5rem;

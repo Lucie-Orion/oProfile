@@ -1,0 +1,12 @@
+.form {
+    &__fieldset {
+    }
+
+    &__submit-button {
+        background-color: $color-dark-background-text;
+        border: none;
+        color: $color-ternary;
+        font-weight: 700;
+        padding: $gutter-small $gutter;
+    }
+}

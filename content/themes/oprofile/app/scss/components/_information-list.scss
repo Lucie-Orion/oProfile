@@ -1,0 +1,38 @@
+.informations-list {
+    display: flex;
+    flex-direction: column;
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        padding: $gutter-large $gutter $gutter-large $gutter-extra-large;
+        position: relative;
+
+        &__title {
+            font: {
+                family: $font-stack-title;
+                size: 1.25rem;
+                weight: 700;
+            }
+            margin-bottom: $gutter;
+        }
+
+        &__content {
+            font: {
+                size: .9rem;
+                weight: 700;
+            }
+            text: {
+                decoration: none;
+                transform: uppercase;
+            }
+        }
+
+        &__icon {
+            font-size: 1.5rem;
+            left: $gutter-large;
+            top: $gutter-large;
+            position: absolute;
+        }
+    }
+}

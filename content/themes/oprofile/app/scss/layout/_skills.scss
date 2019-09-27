@@ -1,0 +1,37 @@
+.skills {
+    background: $color-skills-background;
+    border: $border-width-thin solid $color-skills-border;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    grid-area: skills;
+    margin: $gutter-extra-large;
+
+    @include breakpoint-large {
+        flex: {
+            direction: row;
+            wrap: wrap;
+        }
+    }
+
+    .skill {
+        border-bottom: $border-width-thin solid $color-skills-border;
+        width: 100%;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        @include breakpoint-large {
+            width: 50%;
+
+            &:nth-child(2n + 1) {
+                border-right: $border-width-thin solid $color-skills-border;
+            }
+
+            &:nth-last-child(2) {
+                border-bottom: none;
+            }
+        }
+    }
+}

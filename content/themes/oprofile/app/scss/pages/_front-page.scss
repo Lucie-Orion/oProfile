@@ -1,0 +1,23 @@
+
+.front-page {
+    &__container {
+        display: grid;
+        grid: {
+            template: {
+                areas:
+                    "header"
+                    "banner"
+                    "main"
+                    "intermediate-page"
+                    "skills"
+                    "footer";
+                rows: auto 100vh auto;
+            }
+        }
+        transition: filter $duration-fast;
+
+        &--blurred {
+            filter: blur(20px);
+        }
+    }
+}

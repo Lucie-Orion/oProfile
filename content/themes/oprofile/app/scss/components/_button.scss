@@ -1,0 +1,31 @@
+.button {
+    border: $border-width solid $color-secondary;
+    color: $color-secondary;
+    font-weight: 700;
+    padding: $gutter-small $gutter-very-large $gutter-small $gutter;
+    text: {
+        decoration: none;
+        transform: uppercase;
+    }
+    transition: color $duration-fast,
+                border-color $duration-fast,
+                padding-right $duration-slow;
+    position: relative;
+
+    &::after {
+        content: $fa-var-long-arrow-right;
+        @include fa-icon;
+        // margin-left: $gutter;
+
+        position: absolute;
+        right: $gutter;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:hover {
+        border-color: $color-primary;
+        color: $color-primary;
+        padding-right: $gutter-extra-large;
+    }
+}

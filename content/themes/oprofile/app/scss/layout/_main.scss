@@ -1,0 +1,58 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+
+    @media (min-width: $breakpoint-medium) {
+        flex: {
+            direction: row;
+            wrap: wrap;
+        }
+    }
+
+    .post {
+        position: relative;
+        z-index: 0;
+
+        @media (min-width: $breakpoint-medium) {
+            width: 50%;
+        }
+
+        @media (min-width: $breakpoint-large) {
+            &:nth-child(4n + 1), // le 1er élément d'une liste de 4
+            &:nth-child(4n + 4) // le 4ème élément d'une liste de 4
+            {
+                width: 45%;
+            }
+
+            &:nth-child(4n + 2), // le 2nd élément d'une liste de 4
+            &:nth-child(4n + 3) // le 3ème élément d'une liste de 4
+            {
+                width: 55%;
+            }
+        }
+
+        &::after {
+            background-color: transparentize(#000, 0.75);
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity $duration-slow;
+            z-index: -1;
+        }
+
+        &:hover::after {
+            opacity: 0;
+        }
+
+        // Je boucle sur ma variable de type map $color-posts-background-colors http://thesassway.com/intermediate/if-for-each-while#each
+        @each $post-number, $post-background-color in $color-posts-background-colors {
+            &:nth-child(6n + #{$post-number})::after {
+                background-color: transparentize($post-background-color, 0.25);
+            }
+        }
+    }
+}

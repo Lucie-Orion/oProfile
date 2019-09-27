@@ -1,0 +1,27 @@
+.post {
+    background-size: cover;
+    color: $color-dark-background-text;
+    padding: $gutter-very-large $gutter-large;
+
+    &__header {
+        margin-bottom: $gutter-large;
+
+        &__title {
+            border-bottom: $border-width-thin solid $color-dark-background-text;
+            font: {
+                size: 1.25rem;
+                weight: 900;
+            }
+            padding-bottom: $gutter-thin;
+            text-transform: uppercase;
+        }
+    }
+
+    &__footer {
+        margin-top: $gutter-large;
+
+        &__link {
+            color: $color-dark-background-text;
+        }
+    }
+}

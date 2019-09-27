@@ -1,0 +1,37 @@
+.skill {
+    padding: $gutter-extra-large $gutter-extra-large $gutter-very-large $gutter-large;
+    position: relative;
+
+    @media (min-width: $breakpoint-large) {
+        padding: {
+            left: $gutter-extra-large;
+            right: $gutter-large;
+        }
+    }
+
+    &__title {
+        font: {
+            size: 1.25rem;
+            weight: 700;
+        }
+        margin-bottom: $gutter;
+    }
+
+    &__icon {
+        background-color: $color-secondary;
+        border-radius: .5rem;
+        color: $color-dark-background-text;
+        height: 2.5rem;
+        right: $gutter;
+        line-height: 2.5rem;
+        position: absolute;
+        text-align: center;
+        top: $gutter;
+        width: 2.5rem;
+
+        @media (min-width: $breakpoint-large) {
+            right: auto;
+            left: $gutter;
+        }
+    }
+}

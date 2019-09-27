@@ -1,0 +1,14 @@
+.single-post {
+
+    &__title {
+        text-transform: uppercase;
+        padding-bottom: $gutter;
+    
+    }
+
+    &__text {
+        line-height: $gutter-medium;
+    
+    }
+
+}

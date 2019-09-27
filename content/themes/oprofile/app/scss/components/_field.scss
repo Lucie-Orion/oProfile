@@ -1,0 +1,20 @@
+.field {
+    &__label {
+        font-weight: 700;
+        margin-bottom: $gutter-thin;
+    }
+
+    &__input {
+        font: {
+            family: $font-stack;
+            size: 1.1rem;
+        }
+    }
+
+    &--textarea {
+        .field__input {
+            height: 7rem;
+            resize: vertical;
+        }
+    }
+}
